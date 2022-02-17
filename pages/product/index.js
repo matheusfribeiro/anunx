@@ -9,7 +9,7 @@ import {
   Grid,
   Typography
 } from '@material-ui/core'
-import TemplateDefault from '../src/templates/Default'
+import TemplateDefault from '../../src/templates/Default'
 import { makeStyles } from '@material-ui/core/styles'
 import Carousel from 'react-material-ui-carousel'
 
