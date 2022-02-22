@@ -134,66 +134,66 @@ const Publish = () => {
                 </Container>
 
                 <Container maxWidth="md" className={classes.boxContainer}>
-                      <Box className={classes.box}>
-                      <FormControl error={errors.price && touched.price} fullWidth>
-                          <InputLabel className={classes.inputLabel}>Preço de venda</InputLabel> 
-                          <Input 
-                            name="price"
-                            variant="outlined"
-                            onChange={handleChange}
-                            startAdornment={<InputAdornment position="start">R$</InputAdornment>}
-                          />
-                          <FormHelperText>
-                            { errors.price && touched.price ? errors.price : null }
-                          </FormHelperText>
-                        </FormControl>
-                      </Box>
+                  <Box className={classes.box}>
+                    <FormControl error={errors.price && touched.price} fullWidth>
+                      <InputLabel className={classes.inputLabel}>Preço de venda</InputLabel> 
+                      <Input 
+                        name="price"
+                        variant="outlined"
+                        onChange={handleChange}
+                        startAdornment={<InputAdornment position="start">R$</InputAdornment>}
+                      />
+                      <FormHelperText>
+                        { errors.price && touched.price ? errors.price : null }
+                      </FormHelperText>
+                    </FormControl>
+                  </Box>
                 </Container>
 
                 <Container maxWidth="md" className={classes.boxContainer}>
-                      <Box className={classes.box}>
-                        <Typography component="h6" variant="h6" color="textPrimary" gutterBottom>
-                          Dados de Contato
-                        </Typography>
+                  <Box className={classes.box}>
+                    <Typography component="h6" variant="h6" color="textPrimary" gutterBottom>
+                      Dados de Contato
+                    </Typography>
 
-                        <FormControl error={errors.name && touched.name} fullWidth>
-                          <InputLabel className={classes.inputLabel}>Nome</InputLabel>
-                          <Input
-                            name="name"
-                            value={values.name}
-                            onChange={handleChange}
-                          />
-                          <FormHelperText>
-                            { errors.name && touched.name ? errors.name : null }
-                          </FormHelperText>
-                        </FormControl>
-                        <br /><br />
+                    <FormControl error={errors.name && touched.name} fullWidth>
+                      <InputLabel className={classes.inputLabel}>Nome</InputLabel>
+                      <Input
+                        name="name"
+                        value={values.name}
+                        onChange={handleChange}
+                      />
+                      <FormHelperText>
+                        { errors.name && touched.name ? errors.name : null }
+                      </FormHelperText>
+                    </FormControl>
+                    <br /><br />
 
-                        <FormControl error={errors.email && touched.email} fullWidth>
-                          <InputLabel className={classes.inputLabel}>E-mail</InputLabel>
-                          <Input
-                            name="email"
-                            value={values.email}
-                            onChange={handleChange}
-                          />
-                          <FormHelperText>
-                            { errors.email && touched.email ? errors.email : null }
-                          </FormHelperText>
-                        </FormControl>
-                        <br /><br />
-                        <FormControl error={errors.phone && touched.phone} fullWidth>
-                          <InputLabel className={classes.inputLabel}>Telefone</InputLabel>
-                          <Input
-                            name="phone"
-                            value={values.phone}
-                            onChange={handleChange}
-                          />
-                          <FormHelperText>
-                            { errors.phone && touched.phone ? errors.phone : null }
-                          </FormHelperText>
-                        </FormControl>
-                        <br /><br />
-                      </Box>
+                    <FormControl error={errors.email && touched.email} fullWidth>
+                      <InputLabel className={classes.inputLabel}>E-mail</InputLabel>
+                      <Input
+                        name="email"
+                        value={values.email}
+                        onChange={handleChange}
+                      />
+                      <FormHelperText>
+                        { errors.email && touched.email ? errors.email : null }
+                      </FormHelperText>
+                    </FormControl>
+                    <br /><br />
+                    <FormControl error={errors.phone && touched.phone} fullWidth>
+                      <InputLabel className={classes.inputLabel}>Telefone</InputLabel>
+                      <Input
+                        name="phone"
+                        value={values.phone}
+                        onChange={handleChange}
+                      />
+                      <FormHelperText>
+                        { errors.phone && touched.phone ? errors.phone : null }
+                      </FormHelperText>
+                    </FormControl>
+                    <br /><br />
+                  </Box>
                 </Container>
 
                 <Container maxWidth="md" className={classes.boxContainer}>
@@ -209,8 +209,6 @@ const Publish = () => {
         }
 
       </Formik>
-
-      
     </TemplateDefault>
   )
 }
