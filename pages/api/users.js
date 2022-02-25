@@ -1,38 +1,12 @@
-import dbConnect from '../../src/utils/dbConnect'
-import { crypto } from '../../src/utils/password'
-import UsersModel from '../../src/models/users'
+import nextConnect from 'next-connect'
+import { get, post } from '../../src/controllers/user'
 
 
-const users = async (req, res) => {
-  const { method } = req
+const route = nextConnect()
 
-  switch(method) {
-    case 'GET':
-      await dbConnect()
-      res.status(200).json({ success: true})
-      break
+route.get(get)
 
-    case 'POST':
-      const {
-        name,
-        email,
-        password
-      } = req.body
+route.post(post)
 
-      await dbConnect()
 
-      const passwordCrypto = await crypto(password)
-
-      const user = new UsersModel({
-        name,
-        email,
-        password: passwordCrypto,
-      })
-
-      user.save()
-
-      res.status(201).json({ success: true })
-  }
-}
-
-export default users
+export default route
