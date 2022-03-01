@@ -1,10 +1,8 @@
 import nextConnect from 'next-connect'
-import { get, post } from '../../src/controllers/users'
+import { post } from '../../../src/controllers/auth/signin'
 
 
 const route = nextConnect()
-
-route.get(get)
 
 route.post(post)
 
