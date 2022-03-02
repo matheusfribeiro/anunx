@@ -52,6 +52,10 @@ const Signin = () => {
         </Typography>
       </Container>
 
+      <Container>
+        <button onClick={() => signIn('google')}>Google</button>
+      </Container>
+
       <Container maxWidth="md">
         <Box className={classes.box}>
           <Formik
