@@ -166,7 +166,7 @@ const Signin = ({ APP_URL }) => {
   )
 }
 
-Signin.getInitialProps = async function() {
+Signin.getServerSideProps = async function() {
   return{
     APP_URL: process.env.APP_URL
   }

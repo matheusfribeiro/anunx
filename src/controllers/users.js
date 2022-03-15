@@ -13,7 +13,7 @@ const post = async (req, res) => {
   const {
     name,
     email,
-    password
+    password,
   } = req.body
 
   await dbConnect()
