@@ -14,6 +14,7 @@ import {
   FormControl,
   FormHelperText,
   Input,
+  CircularProgress,
 } from '@material-ui/core'
 
 import TemplateDefault from '../../../src/templates/Default'
@@ -44,7 +45,7 @@ const Publish = ({ userId, image }) => {
       severity: 'success'
     })
 
-    //router.push('/user/dashboard')
+    router.push('/user/dashboard')
   }
 
   const handleError = () => {
@@ -88,6 +89,7 @@ const Publish = ({ userId, image }) => {
             handleChange,
             handleSubmit,
             setFieldValue,
+            isSubmitting,
           }) => {
 
             return (
@@ -248,9 +250,11 @@ const Publish = ({ userId, image }) => {
 
                 <Container maxWidth="md" className={classes.boxContainer}>
                   <Box textAlign="right">
-                    <Button type="submit" variant="contained" color="primary">
-                      Públicar Anúncio
-                    </Button>
+                    {
+                      isSubmitting
+                        ? <CircularProgress className={classes.loading} />
+                        : <Button type="submit" variant="contained" color="primary">Publicar Anúncio</Button>
+                    }
                   </Box>
                 </Container>
               </form>
@@ -270,7 +274,7 @@ export async function getServerSideProps({ req }) {
 
   return {
     props: {
-      userId: userId,
+      userId: userId || null,
       image: user.image,
     },
   };
